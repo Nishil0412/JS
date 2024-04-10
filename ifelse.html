@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GM GN</title>
+
+    <style>
+        #main{
+            height: 500px;
+            width: 500px;
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="main"></div>
+    <script>
+
+        let a = new Date().getHours();
+        
+      
+        if(a < 12){
+            document.write("<h1>Good Morning</h1>");
+            document.getElementById("main").style.background = "url('https://thumbs.dreamstime.com/b/sea-water-ocean-wave-surfing-surface-colorful-vibrant-sunset-barrel-shape-124362369.jpg')";
+        }else if(a < 17){
+            document.write("<h1>Good Afternoon</h1>");
+            document.getElementById("main").style.background = "url('https://www.stockvault.net/data/2020/01/18/272608/thumb16.jpg' )";
+        }else{
+            document.write("<h1>Good Night</h1>");
+            document.getElementById("main").style.background = "url('https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGdvb2QlMjBhbmQlMjBiYWR8ZW58MHx8MHx8fDA%3D')";
+        }
+    </script>
+</body>
+</html>
