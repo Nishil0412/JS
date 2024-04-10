@@ -42,13 +42,14 @@
     </table>
     <h1>If You Get F ,take some time to determine why you failed.  </h1>
     <script>
-        let a =document.getElementById("maths").innerHTML=(25);
-       let b = document.getElementById("science").innerHTML=(35);
-       let c = document.getElementById("english").innerHTML=(45);
-       let d = document.getElementById("hindi").innerHTML=(26);
+        let a =document.getElementById("maths").innerHTML=(95);
+       let b = document.getElementById("science").innerHTML=(65);
+       let c = document.getElementById("english").innerHTML=(90);
+       let d = document.getElementById("hindi").innerHTML=(75);
        let total = document.getElementById("total").innerHTML=(a+b+c+d);   
 
        let percentage = document.getElementById("percentage").innerHTML=(total/400*100)
+
        if(percentage > 75){
         document.getElementById("grade").innerHTML=("A")
        }else if(percentage > 60){
@@ -58,6 +59,7 @@
        }else if(percentage < 33){
         document.getElementById("grade").innerHTML=("F")
        }
+       
     </script>
 </body>
 </html>
