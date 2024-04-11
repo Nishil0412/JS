@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <script>
+
+        let a = new Date().getDate();
+        switch (a) {
+            case 11:
+                demo = "Today is Krishna Janmashtami.";
+                break;
+            case 12:
+                demo = "Today is Diwali";
+                break;
+            case 13:
+                demo = "Today is Holi";
+                break;
+            case 14:
+                demo = "Today is Christmas";
+                break;
+            case 15:
+                demo = "Today is navratri";
+                break;
+            case 16:
+                demo = "Today is Durga Puja";
+                break;
+            case 17:
+                demo = "Today is Makar Sakranti";
+                break;
+            case 18:
+                demo = "Today is Dusshera";
+                break;
+            case 19:
+                demo = "Today is Ganesh chaturthi ";
+                break;
+            case 20:
+                demo = "Today is carnival";
+                break;
+            
+            default:
+                break;
+        }
+        document.getElementById("demo").innerHTML= demo;
+    </script>
+</body>
+</html>
