@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settimeout</title>
+</head>
+<body>
+    <div class="form">
+        <label for="fName">First Name:</label>
+        <input type="text" name="fName" id="fName">
+        <label for="lName">Last Name:</label>
+        <input type="text" name="lName" id="lName">
+        <br><br>
+        <label for="otp">Enter Otp:</label>
+        <input type="number" name="otp" id="otp">
+    </div>
+
+
+    <script>
+        setTimeout(() => {
+            document.getElementById("otp").disabled = "true";
+        }, 2000);
+    </script>
+</body>
+</html>
