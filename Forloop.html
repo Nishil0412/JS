@@ -5,25 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For loop</title>
     <style>
-        .container{
+        #demo{
             height: 500px;
             width: 300px;
             background-color: black;
             margin-left: 200px;
+            
         }
     </style>
 </head>
 <body>
-    <div class="container"></div>
+    <div id="demo"></div>
 
 
     <script>
-        let container = document.getElementsByClassName("container").innerHTML
+
+       
 
 
-        for(let i=0; i < 5; i++ ){
+        for(let i=0; i < 5; i++){
               
-              document.body.appendChild(container);
+              document.write("<div id=demo></div>"+ "<br>")
         }
     </script>
 </body>
