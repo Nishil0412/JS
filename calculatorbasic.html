@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .buttons{
+            position: relative;
+        }
+        p{
+            margin-left: 200px;
+           position: absolute;
+           bottom: 100px;
+        }
+        button{
+            padding: 10 px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Maths Operations</h1>
+        Enter 1st number: &nbsp&nbsp&nbsp      <input type="text" name="" id="one">
+        <br><br><br>
+        Enter 2nd number:  &nbsp&nbsp     <input type="text" name="" id="two">
+
+    </div>
+    <pre>
+    <div class="buttons">
+        <button onclick="add()">+</button> <button onclick="mins()">-</button> <button onclick="mult()">*</button>     
+
+        <button onclick="divi()">/</button>  <button onclick="per()">%</button>
+        
+    </pre>
+                                                            <p>Answer is : <span id="answer"></span></p>
+        
+
+    </div>
+
+
+    <script>
+
+    function add(){
+        let a = document.getElementById("one").value;
+        let b = document.getElementById("two").value;
+        let c = Number(a) + Number(b);
+           
+            document.getElementById("answer").innerHTML = c ;
+        }
+    function mins(){
+        let a = document.getElementById("one").value;
+        let b = document.getElementById("two").value;
+        let c = Number(a) - Number(b);
+           
+            document.getElementById("answer").innerHTML = c ;
+        }
+    function mult(){
+        let a = document.getElementById("one").value;
+        let b = document.getElementById("two").value;
+        let c = Number(a) * Number(b);
+           
+            document.getElementById("answer").innerHTML = c ;
+        }
+    function divi(){
+        let a = document.getElementById("one").value;
+        let b = document.getElementById("two").value;
+        let c = Number(a) / Number(b);
+           
+            document.getElementById("answer").innerHTML = c ;
+        }
+    function per(){
+        let a = document.getElementById("one").value;
+        let b = document.getElementById("two").value;
+        let c = (Number(a) + Number(b))/200*100;
+           
+            document.getElementById("answer").innerHTML = c ;
+        }
+    </script>
+</body>
+</html>
