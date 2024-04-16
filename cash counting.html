@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cash counting</title>
+    <style>
+        img{
+            height: 45px;
+
+        }
+        div{
+            padding: 20px;
+        }
+        #one , #two ,#three ,#four ,#five ,#six{
+            margin-left: 50px;
+        }
+
+        #f500, #t200, #o100, #f50, #t20, #t10{
+            margin-left: 50px;
+            
+        }
+        .total{
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Cash Count</h1>
+    <div class="500">
+        <img src="https://toolsbro.in/tools/cash_calculator/assets/images/500.jpg" alt="500">
+        <input type="text" name="" id="f500" oninput="main()"><span> =</span><input type="text" name="" id="one" readonly>
+    </div>
+    <div class="200">
+        <img src="https://toolsbro.in/tools/cash_calculator/assets/images/200.jpg" alt="200">
+        <input type="text" name="" id="t200" oninput="main()"><span> =</span><input type="text" name="" id="two" readonly>
+    </div>
+    <div class="100">
+        <img src="https://toolsbro.in/tools/cash_calculator/assets/images/100.png" alt="100">
+        <input type="text" name="" id="o100" oninput="main()"><span> =</span><input type="text" name="" id="three" readonly>
+    </div>
+    <div class="50">
+        <img src="https://toolsbro.in/tools/cash_calculator/assets/images/50.jpg" alt="50">
+        <input type="text" name="" id="f50" oninput="main()"><span> =</span><input type="text" name="" id="four" readonly>
+    </div>
+    <div class="20">
+        <img src="https://toolsbro.in/tools/cash_calculator/assets/images/20.jpg" alt="20">
+        <input type="text" name="" id="t20" oninput="main()"><span> =</span><input type="text" name="" id="five" readonly>
+    </div>
+    <div class="10">
+        <img src="https://toolsbro.in/tools/cash_calculator/assets/images/10.jpg" alt="10">
+        <input type="text" name="" id="t10" oninput="main()"><span> =</span><input type="text" name="" id="six" readonly>
+    </div>
+
+
+    <div class="total">
+        <h1>Total cash : <span id="total" oninput="main()"></span></h1>
+        <h1>Total Note's : <span id="notes" oninput="main()"></span></h1>
+    </div>
+
+
+    <script>
+        function main(){
+            let a = document.getElementById("f500").value;
+            let b = document.getElementById("t200").value;
+            let c = document.getElementById("o100").value;
+            let d = document.getElementById("f50").value;
+            let e = document.getElementById("t20").value;
+            let f = document.getElementById("t10").value;
+
+            let a1 = document.getElementById("one").value = a * 500;
+            let b1 =document.getElementById("two").value = b * 200;
+            let c1 =document.getElementById("three").value = c * 100;
+            let d1 = document.getElementById("four").value = d * 50;
+            let e1 =document.getElementById("five").value = e * 20;
+            let f1 =document.getElementById("six").value = f * 10;
+
+
+            document.getElementById("total").innerHTML = a1 + b1 + c1 + d1 + e1 + f1 ;
+
+            document.getElementById("notes").innerHTML = Number(a)+Number(b)+Number(c)+Number(d)+Number(e)+Number(f);
+
+        }
+    </script>
+</body>
+</html>
