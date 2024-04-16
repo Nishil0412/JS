@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromoCode</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: lightblue;
+            font-weight: 900;
+        }
+
+        img {
+            height: 150px;
+        }
+
+        .first ,.second , .third {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .second img{
+            width: 100px;
+        }
+        button{
+            margin-left: 300px;
+        }
+        .total{
+            margin-left: 700px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="first"><img
+            src="https://plus.unsplash.com/premium_photo-1679502560137-a769caba5880?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGVsZWN0cmljfGVufDB8fDB8fHww"
+            alt="1">
+        <p>100</p>
+        <input type="text" name="" id="first" oninput="main()">
+        <h1>TOTAL <span id="tot1">0</span></h1>
+
+    </div>
+    <br>
+    <div class="second"><img
+            src="https://images.unsplash.com/flagged/photo-1558338044-14b972111f16?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fGVsZWN0cmljfGVufDB8fDB8fHww"
+            alt="2">
+        <p>200</p>
+        <input type="text" name="" id="second" oninput="main()">
+        <h1>TOTAL <span id="tot2">0</span></h1>
+    </div>
+    <br>
+    <div class="third"><img
+            src="https://images.unsplash.com/photo-1505577456728-943829a41284?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fGVsZWN0cmljfGVufDB8fDB8fHww"
+            alt="3">
+        <p>500</p>
+        <input type="text" name="" id="third" oninput="main()">
+        <h1>TOTAL <span id="tot3">0</span></h1>
+    </div>
+    <br>
+    <div class="total">
+        <h1>TOTAL : <span id="totmain">0</span></h1><br>
+        <h1>REFER CODE :<input type="text" name="" id="promo"></h1><button onclick="promo()">Submit</button>
+        <h1>FINAL PRIZE : <span id="totfin">0</span></h1>
+    </div>
+
+    <script>
+        function main(){
+           let a = document.getElementById("first").value;
+           let b = document.getElementById("second").value;
+           let c = document.getElementById("third").value;
+
+          let tot1 = document.getElementById("tot1").innerHTML = a * 100;
+          let tot2 = document.getElementById("tot2").innerHTML = b * 200;
+          let tot3 = document.getElementById("tot3").innerHTML = c * 500;
+
+          let totmain = document.getElementById("totmain").innerHTML = tot1 + tot2 + tot3;
+        }
+
+        function promo(){
+            let a = document.getElementById("first").value;
+           let b = document.getElementById("second").value;
+           let c = document.getElementById("third").value;
+            let promo = document.getElementById("promo").value;
+          let tot1 = document.getElementById("tot1").innerHTML = a * 100;
+          let tot2 = document.getElementById("tot2").innerHTML = b * 200;
+          let tot3 = document.getElementById("tot3").innerHTML = c * 500;
+
+          let totmain = document.getElementById("totmain").innerHTML = tot1 + tot2 + tot3;
+
+          if(promo === "manan"){
+            document.getElementById("totfin").innerHTML = totmain / 2;
+          }else if(promo === "nishil"){
+            document.getElementById("totfin").innerHTML = 0 + "    [Name Hi Kafi He] &#128514";
+          }else{
+            document.getElementById("totfin").innerHTML = "Invalid Promo Code";
+          }
+        }
+    </script>
+</body>
+
+</html>
