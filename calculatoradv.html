@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator adv</title>
+    <style>
+        .display{
+            /* border: 5px solid black; */
+            height: 75px;
+            width: 455px;
+        }
+       h1{
+            height: 100%;
+            width: 100%;
+            border: 5px solid black;
+        }
+        input[type = button]{
+            background-color: black;
+            color: white;
+            height: 50px;
+            width: 90px;
+            margin-top: 2px;
+            font-size: xx-large ;
+        }
+        .main{
+            width: 500px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="display">
+            <h1 id="display" disabled></h1>
+        </div>
+        <br>
+        <div class="main">
+            <input type="button" name="" id="" value="0" onclick="main('0')">
+            <input type="button" name="" id="" value="1" onclick="main('1')">
+            <input type="button" name="" id="" value="2" onclick="main('2')">
+            <input type="button" name="" id="" value="3" onclick="main('3')">
+            <input type="button" name="" id="" value="4" onclick="main('4')">
+            <input type="button" name="" id="" value="5" onclick="main('5')">
+            <input type="button" name="" id="" value="6" onclick="main('6')">
+            <input type="button" name="" id="" value="7" onclick="main('7')">
+            <input type="button" name="" id="" value="8" onclick="main('8')">
+            <input type="button" name="" id="" value="9" onclick="main('9')">
+            <input type="button" name="" id="" value="+" onclick="main('+')">
+            <input type="button" name="" id="" value="-" onclick="main('-')">
+            <input type="button" name="" id="" value="*" onclick="main('*')">
+            <input type="button" name="" id="" value="/" onclick="main('/')">
+            <input type="button" name="" id="" value="%" onclick="main('%')">
+            <input type="button" name="" id="" value="=" onclick="calculator()">
+            <input type="button" name="" id="" value="C" onclick="clearInterval()">
+            <input type="button" name="" id="" value="DEL" onclick="del()">
+        </div>
+    </div>
+
+    <script>
+        function main(value){
+            document.getElementById("display").innerHTML += value ;
+        }
+
+        function calculator(){
+            let a  =  document.getElementById("display").innerHTML;
+            let result;
+            try{
+              result =  eval(a)
+            }
+            catch(error){
+                result = "error"
+            }
+            document.getElementById("display").innerHTML = result;
+        }
+
+        function del(){
+            document.getElementById("display").innerHTML = display.innerHTML.toString().slice(0,-1);
+        }
+
+        function clearInterval(){
+            document.getElementById("display").innerHTML = "";
+        }
+    </script>
+</body>
+</html>
