@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .main{
+           
+            height: 100vh;
+            text-align: center;
+            margin-top: 100px;
+        }
+        h1{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Counter</h1>
+        <h1 id="demo"></h1>
+        <div class="flex">
+            <input type="button" name="" id="decrease" value="DECREASE" onclick="sub()">
+            <input type="button" name="" id="reset" value="RESET" onclick="reset()">
+            <input type="button" name="" id="increase" value="INCREASE" onclick="add()">
+        </div>
+    </div>
+    
+
+    <script>
+        
+        a = 0;
+        function add(){
+            let a =document.getElementById("demo").innerHTML;
+               a++,
+               document.getElementById("demo").innerHTML = a;
+        }
+        function sub(){
+            let a =document.getElementById("demo").innerHTML;
+
+            if(a > 0){
+               a--,
+               document.getElementById("demo").innerHTML = a;
+            }
+        }
+        function reset(){
+            document.getElementById("demo").innerHTML = a;
+        }
+    </script>
+</body>
+</html>
